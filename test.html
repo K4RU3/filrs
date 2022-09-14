@@ -1,0 +1,35 @@
+<html>
+    <head lang="ja">
+
+    </head>
+    <body>
+        <h1 align="center">ば〜〜〜〜〜〜〜か！！！！</h1>
+        <center>
+            <div id="1st"></div>
+            <div id="2nd"></div>
+        </center>
+
+    </body>
+</html>
+
+<script>
+    let st = document.getElementById("1st")
+    let nd = document.getElementById("2nd")
+    let elem = document.createElement("img")
+    
+    for(let i = 1;i < 17;i++){
+        eval("var st" + i + " = document.createElement('img')")
+        eval("st" + i + ".src ='https://k4ru3.github.io/filrs/gifs/1-" + i + ".gif'")
+        eval("st" + i + ".width='85'")
+        eval("st" + i + ".height='85'")
+        eval("st.appendChild(st" + i + ")")
+    }
+
+    for(let i = 1;i < 17;i++){
+        eval("var nd" + i + " = document.createElement('img')")
+        eval("nd" + i + ".src ='https://k4ru3.github.io/filrs/gifs/2-" + i + ".gif'")
+        eval("nd" + i + ".width='85'")
+        eval("nd" + i + ".height='85'")
+        eval("nd.appendChild(nd" + i + ")")
+    }
+</script>
