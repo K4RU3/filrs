@@ -16,20 +16,22 @@
     let st = document.getElementById("1st")
     let nd = document.getElementById("2nd")
     let elem = document.createElement("img")
+    for(let i = 1;i < 19;i++){
+        for(let c = 1;c < 3; c++){
+            //データ読み込み
+            eval("var img" + c + "_" + i + " = document.createElement(\"img\")")
+            eval("img" + c + "_" + i + ".width = '75'")
+            eval("img" + c + "_" + i + ".src = 'https://k4ru3.github.io/filrs/gifs/" + c + "-" + i + ".gif'")
+        }
+    }
+    for(let i = 1;i < 19;i++){
+        for(let c = 1;c < 3; c++){
+            if(c == 1){
+                eval("st.appendChild(img1_"+ i + ")")
+            }else if(c == 2){
+                eval("nd.appendChild(img2_"+ i + ")")
+            }
+        }
+    }
     
-    for(let i = 1;i < 17;i++){
-        eval("var st" + i + " = document.createElement('img')")
-        eval("st" + i + ".src ='https://k4ru3.github.io/filrs/gifs/1-" + i + ".gif'")
-        eval("st" + i + ".width='85'")
-        eval("st" + i + ".height='85'")
-        eval("st.appendChild(st" + i + ")")
-    }
-
-    for(let i = 1;i < 17;i++){
-        eval("var nd" + i + " = document.createElement('img')")
-        eval("nd" + i + ".src ='https://k4ru3.github.io/filrs/gifs/2-" + i + ".gif'")
-        eval("nd" + i + ".width='85'")
-        eval("nd" + i + ".height='85'")
-        eval("nd.appendChild(nd" + i + ")")
-    }
 </script>
