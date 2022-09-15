@@ -20,18 +20,25 @@
         for(let c = 1;c < 3; c++){
             //データ読み込み
             eval("var img" + c + "_" + i + " = document.createElement(\"img\")")
+            if(i == 18 && c == 2){
+                img2_18.addEventListener("load",e=>{setTimeout(loaded,1000)})
+            }
             eval("img" + c + "_" + i + ".width = '75'")
             eval("img" + c + "_" + i + ".src = 'https://k4ru3.github.io/filrs/gifs/" + c + "-" + i + ".gif'")
         }
     }
-    for(let i = 1;i < 19;i++){
-        for(let c = 1;c < 3; c++){
-            if(c == 1){
-                eval("st.appendChild(img1_"+ i + ")")
-            }else if(c == 2){
-                eval("nd.appendChild(img2_"+ i + ")")
+
+    let loaded = function(){
+        for(let i = 1;i < 19;i++){
+            for(let c = 1;c < 3; c++){
+                if(c == 1){
+                    eval("st.appendChild(img1_"+ i + ")")
+                }else if(c == 2){
+                    eval("nd.appendChild(img2_"+ i + ")")
+                }
             }
         }
     }
+    
     
 </script>
